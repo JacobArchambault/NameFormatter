@@ -24,12 +24,11 @@ public class NameFormatter extends Application {
 			new Label(
 					"Middle name:"),
 			mnTextField);
-	Label lnprompt = new Label(
-			"Last name:");
 	TextField lnTextField = new TextField();
 	HBox lnhbox = new HBox(
 			10,
-			lnprompt,
+			new Label(
+					"Last name:"),
 			lnTextField);
 	Label tprompt = new Label(
 			"Title:");
