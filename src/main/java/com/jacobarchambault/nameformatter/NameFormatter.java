@@ -18,12 +18,11 @@ public class NameFormatter extends Application {
 			new Label(
 					"First name:"),
 			fnTextField);
-	Label mnprompt = new Label(
-			"Middle name:");
 	TextField mnTextField = new TextField();
 	HBox mnhbox = new HBox(
 			10,
-			mnprompt,
+			new Label(
+					"Middle name:"),
 			mnTextField);
 	Label lnprompt = new Label(
 			"Last name:");
