@@ -70,8 +70,6 @@ public class NameFormatter extends Application {
 			thbox,
 			bhbox,
 			outputHBox);
-	Scene scene = new Scene(
-			masterVBox);
 
 	@Override
 	public void start(
@@ -131,7 +129,8 @@ public class NameFormatter extends Application {
 						10));// Add the master VBox to a scene.
 		// Set the scene to the stage and display it.
 		primaryStage.setScene(
-				scene);
+				new Scene(
+						masterVBox));
 		primaryStage.show();
 	}
 
