@@ -1,5 +1,6 @@
 package com.jacobarchambault.nameformatter;
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
@@ -7,14 +8,14 @@ import javafx.scene.layout.GridPane;
 public class TextLabelGrid extends GridPane {
 
 	TextLabelGrid(
-			Label l1,
-			Label l2,
-			Label l3,
-			Label l4,
-			TextField tf1,
-			TextField tf2,
-			TextField tf3,
-			TextField tf4) {
+			final Label l1,
+			final Label l2,
+			final Label l3,
+			final Label l4,
+			final TextField tf1,
+			final TextField tf2,
+			final TextField tf3,
+			final TextField tf4) {
 		add(
 				l1,
 				0,
@@ -47,8 +48,11 @@ public class TextLabelGrid extends GridPane {
 				tf4,
 				1,
 				3);
-		setVgap(10);
-		setCenterShape(true);
-
+		setVgap(
+				10);
+		setCenterShape(
+				true);
+		setAlignment(
+				Pos.CENTER);
 	}
 }

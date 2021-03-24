@@ -1,50 +1,49 @@
 package com.jacobarchambault.nameformatter;
 
 import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.scene.layout.HBox;
-import javafx.geometry.Pos;
 import javafx.geometry.Insets;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
 public class NameFormatter extends Application {
+	public static void main(
+			final String[] args) {
+		Application.launch(
+				args);
+	}
+
 	TextField fnTextField = new TextField();
-	TextField mnTextField = new TextField();
 	TextField lnTextField = new TextField();
-	TextField tTextField = new TextField();
+	TextField mnTextField = new TextField();
 	Label outputLabel = new Label();
-	TextLabelGrid main = new TextLabelGrid(
-			new Label(
-					"First Name: "),
-			new Label(
-					"Middle Name: "),
-			new Label(
-					"Last Name: "),
-			new Label(
-					"Title: "),
-			fnTextField,
-			mnTextField,
-			lnTextField,
-			tTextField);
+
+	TextField tTextField = new TextField();
 
 	@Override
 	public void start(
-			Stage primaryStage) throws Exception {
-		main.setAlignment(Pos.CENTER);
-		// Create the output label.
-		// Register event handlers.
-		// Set the scene to the stage and display it.
+			final Stage primaryStage) throws Exception {
 		primaryStage.setScene(
 				new Scene(
 						new MasterVBox(
 								10,
 								new Insets(
 										10),
-								main,
+								new TextLabelGrid(
+										new Label(
+												"First Name: "),
+										new Label(
+												"Middle Name: "),
+										new Label(
+												"Last Name: "),
+										new Label(
+												"Title: "),
+										fnTextField,
+										mnTextField,
+										lnTextField,
+										tTextField),
 								new HBox(
 										10,
 										new EventButton(
@@ -92,12 +91,6 @@ public class NameFormatter extends Application {
 								new HBox(
 										outputLabel))));
 		primaryStage.show();
-	}
-
-	public static void main(
-			String[] args) {
-		launch(
-				args);
 	}
 
 }

@@ -5,9 +5,15 @@ import javafx.scene.Node;
 import javafx.scene.layout.VBox;
 
 class MasterVBox extends VBox {
-	MasterVBox(int spacing, Insets insets, Node... children){
-		super(spacing, children);
-		setPadding(insets);
+	MasterVBox(
+			final int spacing,
+			final Insets insets,
+			final Node... children) {
+		super(
+				spacing,
+				children);
+		setPadding(
+				insets);
 	}
 
 }
