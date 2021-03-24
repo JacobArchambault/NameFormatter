@@ -57,16 +57,6 @@ public class NameFormatter extends Application {
 			button5,
 			button6);
 	Label outputLabel = new Label();
-	VBox masterVBox = new VBox(
-			10,
-			fnhbox,
-			mnhbox,
-			lnhbox,
-			thbox,
-			bhbox,
-			new HBox(
-					outputLabel));
-
 	@Override
 	public void start(
 			Stage primaryStage) throws Exception {
@@ -119,14 +109,20 @@ public class NameFormatter extends Application {
 					outputLabel.setText(
 							lnTextField.getText() + ", " + mnTextField.getText());
 				});
-		// Create a master VBox
-		masterVBox.setPadding(
-				new Insets(
-						10));// Add the master VBox to a scene.
 		// Set the scene to the stage and display it.
 		primaryStage.setScene(
 				new Scene(
-						masterVBox));
+						new MasterVBox(
+								10,
+								new Insets(
+										10),
+								fnhbox,
+								mnhbox,
+								lnhbox,
+								thbox,
+								bhbox,
+								new HBox(
+										outputLabel))));
 		primaryStage.show();
 	}
 
