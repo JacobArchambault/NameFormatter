@@ -37,51 +37,46 @@ public class NameFormatter extends Application {
 					"Title:"),
 			tTextField);
 	Label outputLabel = new Label();
-	EventButton button1 = new EventButton(
-			"Format 1",
-			e -> {
-				outputLabel.setText(
-						tTextField.getText() + " " + fnTextField.getText() + " " + mnTextField.getText() + " "
-								+ lnTextField.getText());
-			});
-	EventButton button2 = new EventButton(
-			"Format 2",
-			e -> {
-				outputLabel.setText(
-						fnTextField.getText() + " " + mnTextField.getText() + " " + lnTextField.getText());
-			});
-	EventButton button3 = new EventButton(
-			"Format 3",
-			e -> {
-				outputLabel.setText(
-						fnTextField.getText() + " " + lnTextField.getText());
-			});
-	EventButton button4 = new EventButton(
-			"Format 4",
-			e -> {
-				outputLabel.setText(
-						lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText() + ", "
-								+ tTextField.getText());
-			});
-	EventButton button5 = new EventButton(
-			"Format 5",
-			e -> {
-				outputLabel.setText(
-						lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText());
-			});
-	EventButton button6 = new EventButton(
-			"Format 6", e -> {
-				outputLabel.setText(
-						lnTextField.getText() + ", " + fnTextField.getText());
-			});
 	HBox bhbox = new HBox(
 			10,
-			button1,
-			button2,
-			button3,
-			button4,
-			button5,
-			button6);
+			new EventButton(
+					"Format 1",
+					e -> {
+						outputLabel.setText(
+								tTextField.getText() + " " + fnTextField.getText() + " " + mnTextField.getText() + " "
+										+ lnTextField.getText());
+					}),
+			new EventButton(
+					"Format 2",
+					e -> {
+						outputLabel.setText(
+								fnTextField.getText() + " " + mnTextField.getText() + " " + lnTextField.getText());
+					}),
+			new EventButton(
+					"Format 3",
+					e -> {
+						outputLabel.setText(
+								fnTextField.getText() + " " + lnTextField.getText());
+					}),
+			new EventButton(
+					"Format 4",
+					e -> {
+						outputLabel.setText(
+								lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText()
+										+ ", " + tTextField.getText());
+					}),
+			new EventButton(
+					"Format 5",
+					e -> {
+						outputLabel.setText(
+								lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText());
+					}),
+			new EventButton(
+					"Format 6",
+					e -> {
+						outputLabel.setText(
+								lnTextField.getText() + ", " + fnTextField.getText());
+					}));
 
 	@Override
 	public void start(
