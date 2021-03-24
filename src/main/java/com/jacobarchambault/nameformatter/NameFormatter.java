@@ -48,46 +48,46 @@ public class NameFormatter extends Application {
 										10,
 										new EventButton(
 												"Format 1",
-												e -> {
+												e -> 
 													outputLabel.setText(
 															tTextField.getText() + " " + fnTextField.getText() + " "
 																	+ mnTextField.getText() + " "
-																	+ lnTextField.getText());
-												}),
+																	+ lnTextField.getText())
+												),
 										new EventButton(
 												"Format 2",
-												e -> {
+												e -> 
 													outputLabel.setText(
 															fnTextField.getText() + " " + mnTextField.getText() + " "
-																	+ lnTextField.getText());
-												}),
+																	+ lnTextField.getText())
+												),
 										new EventButton(
 												"Format 3",
-												e -> {
+												e -> 
 													outputLabel.setText(
-															fnTextField.getText() + " " + lnTextField.getText());
-												}),
+															fnTextField.getText() + " " + lnTextField.getText())
+												),
 										new EventButton(
 												"Format 4",
-												e -> {
+												e -> 
 													outputLabel.setText(
 															lnTextField.getText() + ", " + fnTextField.getText() + " "
 																	+ mnTextField.getText() + ", "
-																	+ tTextField.getText());
-												}),
+																	+ tTextField.getText())
+												),
 										new EventButton(
 												"Format 5",
-												e -> {
+												e -> 
 													outputLabel.setText(
 															lnTextField.getText() + ", " + fnTextField.getText() + " "
-																	+ mnTextField.getText());
-												}),
+																	+ mnTextField.getText())
+												),
 										new EventButton(
 												"Format 6",
-												e -> {
+												e -> 
 													outputLabel.setText(
-															lnTextField.getText() + ", " + fnTextField.getText());
-												})),
+															lnTextField.getText() + ", " + fnTextField.getText())
+												)),
 								new HBox(
 										outputLabel))));
 		primaryStage.show();
