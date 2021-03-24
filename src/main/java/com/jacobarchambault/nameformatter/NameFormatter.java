@@ -57,8 +57,6 @@ public class NameFormatter extends Application {
 			button5,
 			button6);
 	Label outputLabel = new Label();
-	HBox outputHBox = new HBox(
-			outputLabel);
 	VBox masterVBox = new VBox(
 			10,
 			fnhbox,
@@ -66,7 +64,8 @@ public class NameFormatter extends Application {
 			lnhbox,
 			thbox,
 			bhbox,
-			outputHBox);
+			new HBox(
+					outputLabel));
 
 	@Override
 	public void start(
