@@ -36,18 +36,44 @@ public class NameFormatter extends Application {
 			new Label(
 					"Title:"),
 			tTextField);
-	Button button1 = new Button(
-			"Format 1");
-	Button button2 = new Button(
-			"Format 2");
-	Button button3 = new Button(
-			"Format 3");
-	Button button4 = new Button(
-			"Format 4");
-	Button button5 = new Button(
-			"Format 5");
-	Button button6 = new Button(
-			"Format 6");
+	Label outputLabel = new Label();
+	EventButton button1 = new EventButton(
+			"Format 1",
+			e -> {
+				outputLabel.setText(
+						tTextField.getText() + " " + fnTextField.getText() + " " + mnTextField.getText() + " "
+								+ lnTextField.getText());
+			});
+	EventButton button2 = new EventButton(
+			"Format 2",
+			e -> {
+				outputLabel.setText(
+						fnTextField.getText() + " " + mnTextField.getText() + " " + lnTextField.getText());
+			});
+	EventButton button3 = new EventButton(
+			"Format 3",
+			e -> {
+				outputLabel.setText(
+						fnTextField.getText() + " " + lnTextField.getText());
+			});
+	EventButton button4 = new EventButton(
+			"Format 4",
+			e -> {
+				outputLabel.setText(
+						lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText() + ", "
+								+ tTextField.getText());
+			});
+	EventButton button5 = new EventButton(
+			"Format 5",
+			e -> {
+				outputLabel.setText(
+						lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText());
+			});
+	EventButton button6 = new EventButton(
+			"Format 6", e -> {
+				outputLabel.setText(
+						lnTextField.getText() + ", " + fnTextField.getText());
+			});
 	HBox bhbox = new HBox(
 			10,
 			button1,
@@ -56,7 +82,7 @@ public class NameFormatter extends Application {
 			button4,
 			button5,
 			button6);
-	Label outputLabel = new Label();
+
 	@Override
 	public void start(
 			Stage primaryStage) throws Exception {
@@ -77,38 +103,6 @@ public class NameFormatter extends Application {
 				Pos.CENTER);
 		// Create the output label.
 		// Register event handlers.
-		button1.setOnAction(
-				e -> {
-					outputLabel.setText(
-							tTextField.getText() + " " + fnTextField.getText() + " " + mnTextField.getText() + " "
-									+ lnTextField.getText());
-				});
-		button2.setOnAction(
-				e -> {
-					outputLabel.setText(
-							fnTextField.getText() + " " + mnTextField.getText() + " " + lnTextField.getText());
-				});
-		button3.setOnAction(
-				e -> {
-					outputLabel.setText(
-							fnTextField.getText() + " " + lnTextField.getText());
-				});
-		button4.setOnAction(
-				e -> {
-					outputLabel.setText(
-							lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText() + ", "
-									+ tTextField.getText());
-				});
-		button5.setOnAction(
-				e -> {
-					outputLabel.setText(
-							lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText());
-				});
-		button6.setOnAction(
-				e -> {
-					outputLabel.setText(
-							lnTextField.getText() + ", " + mnTextField.getText());
-				});
 		// Set the scene to the stage and display it.
 		primaryStage.setScene(
 				new Scene(
