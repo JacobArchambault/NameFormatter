@@ -30,12 +30,11 @@ public class NameFormatter extends Application {
 			new Label(
 					"Last name:"),
 			lnTextField);
-	Label tprompt = new Label(
-			"Title:");
 	TextField tTextField = new TextField();
 	HBox thbox = new HBox(
 			10,
-			tprompt,
+			new Label(
+					"Title:"),
 			tTextField);
 	Button button1 = new Button(
 			"Format 1");
