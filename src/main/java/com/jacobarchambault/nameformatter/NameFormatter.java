@@ -37,46 +37,6 @@ public class NameFormatter extends Application {
 					"Title:"),
 			tTextField);
 	Label outputLabel = new Label();
-	HBox bhbox = new HBox(
-			10,
-			new EventButton(
-					"Format 1",
-					e -> {
-						outputLabel.setText(
-								tTextField.getText() + " " + fnTextField.getText() + " " + mnTextField.getText() + " "
-										+ lnTextField.getText());
-					}),
-			new EventButton(
-					"Format 2",
-					e -> {
-						outputLabel.setText(
-								fnTextField.getText() + " " + mnTextField.getText() + " " + lnTextField.getText());
-					}),
-			new EventButton(
-					"Format 3",
-					e -> {
-						outputLabel.setText(
-								fnTextField.getText() + " " + lnTextField.getText());
-					}),
-			new EventButton(
-					"Format 4",
-					e -> {
-						outputLabel.setText(
-								lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText()
-										+ ", " + tTextField.getText());
-					}),
-			new EventButton(
-					"Format 5",
-					e -> {
-						outputLabel.setText(
-								lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText());
-					}),
-			new EventButton(
-					"Format 6",
-					e -> {
-						outputLabel.setText(
-								lnTextField.getText() + ", " + fnTextField.getText());
-					}));
 
 	@Override
 	public void start(
@@ -93,9 +53,6 @@ public class NameFormatter extends Application {
 		// Create the controls for the title.
 		thbox.setAlignment(
 				Pos.CENTER);
-		// Create the Button Controls.
-		bhbox.setAlignment(
-				Pos.CENTER);
 		// Create the output label.
 		// Register event handlers.
 		// Set the scene to the stage and display it.
@@ -109,7 +66,46 @@ public class NameFormatter extends Application {
 								mnhbox,
 								lnhbox,
 								thbox,
-								bhbox,
+								new HBox(
+										10,
+										new EventButton(
+												"Format 1",
+												e -> {
+													outputLabel.setText(
+															tTextField.getText() + " " + fnTextField.getText() + " " + mnTextField.getText() + " "
+																	+ lnTextField.getText());
+												}),
+										new EventButton(
+												"Format 2",
+												e -> {
+													outputLabel.setText(
+															fnTextField.getText() + " " + mnTextField.getText() + " " + lnTextField.getText());
+												}),
+										new EventButton(
+												"Format 3",
+												e -> {
+													outputLabel.setText(
+															fnTextField.getText() + " " + lnTextField.getText());
+												}),
+										new EventButton(
+												"Format 4",
+												e -> {
+													outputLabel.setText(
+															lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText()
+																	+ ", " + tTextField.getText());
+												}),
+										new EventButton(
+												"Format 5",
+												e -> {
+													outputLabel.setText(
+															lnTextField.getText() + ", " + fnTextField.getText() + " " + mnTextField.getText());
+												}),
+										new EventButton(
+												"Format 6",
+												e -> {
+													outputLabel.setText(
+															lnTextField.getText() + ", " + fnTextField.getText());
+												})),
 								new HBox(
 										outputLabel))));
 		primaryStage.show();
